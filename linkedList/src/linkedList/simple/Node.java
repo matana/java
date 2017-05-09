@@ -9,5 +9,9 @@ public class Node {
 		this.value = value;
 	}
 	
+	public Integer getValue() {
+		return value;
+	}
+	
 
 }
