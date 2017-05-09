@@ -19,7 +19,7 @@ public class List implements Iterable<Node> {
 	}
 	
 	// TODO: 
-	public int indexOf() {
+	public int indexOf(int value) {
 		return 0;
 	}
 
