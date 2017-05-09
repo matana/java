@@ -1,10 +1,13 @@
 package linkedList;
 
+import java.util.Iterator;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import linkedList.simple.List;
+import linkedList.simple.Node;
 
 public class LinkedListTests {
 	
@@ -53,6 +56,15 @@ public class LinkedListTests {
 		list.removeAll();
 		Assert.assertNull(list.first());
 		Assert.assertEquals(0, list.size());
+	}
+	
+	@Test
+	public void iterate() {
+		int count = 0;
+		int size = list.size();
+		Iterator<Node> iterator = list.iterator();
+		while(iterator.hasNext())  count++;
+		Assert.assertEquals(size, count);
 	}
 	
 	
