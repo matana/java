@@ -7,6 +7,21 @@ public class List implements Iterable<Node> {
 	Node first;
 	Node last;
 	int size = 0;
+	
+	// TODO: 
+	public List subList(int from, int to) {
+		return null;
+	}
+	
+	// TODO: 
+	public int[] toArray() {
+		return null;
+	}
+	
+	// TODO: 
+	public int indexOf() {
+		return 0;
+	}
 
 	// insert
 	public void insert(Integer value) {
