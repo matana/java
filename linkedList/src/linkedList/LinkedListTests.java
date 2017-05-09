@@ -16,11 +16,11 @@ public class LinkedListTests {
 	@Before
 	public void init() {
 		list = new List();
-		list.addNode(1);
-		list.addNode(-13);
-		list.addNode(99);
-		list.addNode(5);
-		list.addNode(27);
+		list.insert(1);
+		list.insert(-13);
+		list.insert(99);
+		list.insert(5);
+		list.insert(27);
 	}
 	
 	@Test

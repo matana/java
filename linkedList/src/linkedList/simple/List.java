@@ -8,8 +8,8 @@ public class List implements Iterable<Node> {
 	Node last;
 	int size = 0;
 
-	// addNode
-	public void addNode(int value) {
+	// insert
+	public void insert(Integer value) {
 		if (first == null)
 			first = last = new Node(value);
 		else {
