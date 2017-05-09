@@ -1,28 +1,30 @@
 package linkedList.simple;
 
-public class List {
+import java.util.Iterator;
+
+public class List implements Iterable<Node> {
 
 	Node first;
-	Node current;
+	Node last;
 	int size = 0;
 
 	// addNode
 	public void addNode(int value) {
 		if (first == null)
-			first = current = new Node(value);
+			first = last = new Node(value);
 		else {
-			current.next = new Node(value);
-			current = current.next;
+			last.next = new Node(value);
+			last = last.next;
 		}
 		size++;
 	}
-	
+
 	public Integer first() {
 		return first == null ? null : first.value;
 	}
 
 	public Integer last() {
-		return current == null ? null : current.value;
+		return last == null ? null : last.value;
 	}
 
 	// size
@@ -32,20 +34,20 @@ public class List {
 
 	// remove
 	public boolean remove(int value) {
-		
+
 		boolean remove = false;
-		
-		if(!contains(value)) {
+
+		if (!contains(value)) {
 			return false;
 		} else {
-			
+
 			Node current = first;
 			Node prev = null;
-			
-			if(first.value == value) {
+
+			if (first.value == value) {
 				first = first.next;
 			} else {
-				while(current != null && current.value != value) {
+				while (current != null && current.value != value) {
 					prev = current;
 					current = current.next;
 				}
@@ -54,7 +56,7 @@ public class List {
 			size--;
 			remove = true;
 		}
-		
+
 		return remove;
 	}
 
@@ -89,6 +91,28 @@ public class List {
 			print(current.next);
 		}
 		System.out.println();
+	}
+
+	@Override
+	public Iterator<Node> iterator() {
+		
+		Iterator<Node> iterator = new Iterator<Node>() {
+			
+			Node current = first;
+
+			@Override
+			public boolean hasNext() {
+				return current != null;
+			}
+
+			@Override
+			public Node next() {
+				Node toReturn = current;
+				current = current.next;
+				return toReturn;
+			}
+		};
+		return iterator;
 	}
 
 }
