@@ -32,7 +32,6 @@
             <li><p><code>public void insertFirst(int value)</code></p>
                 <p> // Fügt den übergebenen Wert an die erste Position der Liste.</p>
             </li>
-            
           </ul>
           <p>Erstellen Sie in der Klasse <a href="https://github.com/matana/java/blob/master/linkedList/src/linkedList/LinkedListTests.java">LinkedListTests</a> entsprechende Unit-Tests, die die Funktionalität Ihrer Implementationen überprüfen.</p>
         </td>
