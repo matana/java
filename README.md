@@ -20,9 +20,15 @@
         <td>
           <p>Die Klasse <a href="https://github.com/matana/java/blob/master/linkedList/src/linkedList/simple/List.java">List</a> beinhaltet drei Methoden, welche implementiert werden sollen:</p>
           <ul>
-            <li>public int[] toArray()</li>
-            <li>public int indexOf(int value)</li>
-            <li>public List subList(int from, int to)</li>
+            <li><p><code>public int[] toArray()</code></p>
+               <p> // Gibt die Liste als Array vom Typ int zurück.</p>
+            </li>
+            <li><p><code>public int indexOf(int value)</code></p>
+                <p> // Gibt die Indexposition von 'value' innerhalb der Liste zurück.</p>
+            </li>
+            <li><p><code>public List subList(int from, int to)</code></p>
+                <p> // Erstellt eine Teilliste mithilfe der Indices 'from' und 'to'.</p>
+            </li>
           </ul>
           <p>Erstellen Sie in der Klasse <a href="https://github.com/matana/java/blob/master/linkedList/src/linkedList/LinkedListTests.java">LinkedListTests</a> entsprechende Unit-Tests, die die Funktionalität Ihrer Implementationen überprüfen.</p>
         </td>
