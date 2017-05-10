@@ -68,5 +68,20 @@ public class LinkedListTests {
 	}
 	
 	
+	// TODO:
+	public void subList() {
+	}
+
+	// TODO:
+	public void toArray() {
+
+	}
+
+	// TODO:
+	public void indexOf() {
+		
+	}
+	
+	
 
 }
