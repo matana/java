@@ -2,35 +2,73 @@ package linkedList.simple;
 
 import java.util.Iterator;
 
+/**
+ * <p>
+ * Die Klasse <code>List</code> repräsentiert eine einfach verkettete Liste:
+ * <ul>
+ * <li>Eine Liste ist eine endliche Folge von Elementen
+ * <code>[a1,a2,...aN]</code></li>
+ * <li>Ein Sonderfall ist die leere Liste <code>[]</code></li>
+ * <li>Die Länge einer Liste entspricht der Anzahl ihrer Elemente</li>
+ * </ul>
+ * <p>
+ * Im Unterschied zu einem Array erfolgt der Zugriff auf die Elemente nicht über
+ * einen Index, sondern sequenziell. Dabei besitzt jedes Element eine Referenz
+ * auf seinen Nachfolger, daher spricht man von einer einfachen Verkettetung.
+ * Besitzt ein Element zusätzlich eine Referenz auf seinen Vorgänger, spricht
+ * man von einer doppelt verketteten Liste.
+ * </p>
+ * <p>
+ * Die Elemente der Liste werden durch die Klasse {@link Node} realisiert.
+ * </p>
+ */
+
 public class List implements Iterable<Node> {
 
-	Node first;
-	Node last;
+	/**
+	 * Referenzen auf das erste und auf das letzte Element der Liste. Der Zeiger
+	 * auf das letzte Element ermöglicht das Einfügen neuer Elemente in
+	 * konstanter Zeit.
+	 */
+	Node first, last;
+
 	int size = 0;
-	
-	// TODO: 
+
+	// TODO:
 	public List subList(int from, int to) {
 		return null;
 	}
-	
-	// TODO: 
+
+	// TODO:
 	public int[] toArray() {
 		return null;
 	}
-	
-	// TODO: 
+
+	// TODO:
 	public int indexOf(int value) {
 		return 0;
 	}
 
+	// TODO:
+	public void insertFirst(int value) {
+
+	}
+
 	// insert
 	public void insert(Integer value) {
+
+		Node newNode = new Node(value);
+
+		// (1) Liste ist leer, d.h. erstes Element zeigt auf "null"
 		if (first == null)
-			first = last = new Node(value);
+			first = last = newNode;
 		else {
-			last.next = new Node(value);
-			last = last.next;
+			// (2) Der letzte Knoten bekommt einen Nachfolger...
+			last.next = newNode;
+			// ... und der neue Knoten zeigt auf 'last'
+			last = newNode;
 		}
+		// (3) Länge der Liste um eins erhöhen.
 		size++;
 	}
 
@@ -50,29 +88,31 @@ public class List implements Iterable<Node> {
 	// remove
 	public boolean remove(int value) {
 
-		boolean remove = false;
-
+		// (1) Liste enthält das Element nicht
 		if (!contains(value)) {
-			return false;
+			return false; // Methode wird abgebrochen
 		} else {
 
 			Node current = first;
 			Node prev = null;
 
+			// (2.1) Wert befindet sich im ersten Element
 			if (first.value == value) {
-				first = first.next;
+				first = first.next; // ... Element wird überschrieben.
 			} else {
+				// (2.2) Das zu löschende Element befindet sich innerhalb der
+				// Liste
 				while (current != null && current.value != value) {
 					prev = current;
 					current = current.next;
 				}
 				prev.next = current.next;
 			}
+			// (3) Länge der Liste um 1 verringern.
 			size--;
-			remove = true;
+			return true;
 		}
 
-		return remove;
 	}
 
 	// contains
@@ -110,9 +150,9 @@ public class List implements Iterable<Node> {
 
 	@Override
 	public Iterator<Node> iterator() {
-		
+
 		Iterator<Node> iterator = new Iterator<Node>() {
-			
+
 			Node current = first;
 
 			@Override
