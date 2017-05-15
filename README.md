@@ -41,8 +41,7 @@
         <td>Stack, Generics, Iterable</td>
         <td>
             <ul>
-            
-                             <li>
+               <li>
                   <a href="http://www.torsten-horn.de/techdocs/java-generics.htm">Generics</a>
                </li>
                <li>
