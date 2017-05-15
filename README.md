@@ -51,7 +51,7 @@
         </td>
         <td><a href="https://github.com/matana/java/tree/master/stack">stack</a></td>
         <td>
-          Erstelle das Interface <code>Collection</code>, welches gemeinsame Methoden (u.a. size, toArray,  deleteAll, contains, remove(int x), count (int x) - diese Methode gibt die Anzahl der Vorkommnisse von 'x' zurück,  ) der <a href="https://github.com/matana/java/tree/master/linkedList">linkedList</a> und <a href="https://github.com/matana/java/tree/master/stack">stack</a> definiert. Collection soll zudem das Interface <code>Interable</code> erweitern.
+          Erstelle das Interface <code>Collection</code>, welches gemeinsame Methoden (u.a. size, toArray,  deleteAll, contains, remove(int x) und count (int x) - diese Methode gibt die Anzahl der Vorkommnisse von 'x' zurück) der <a href="https://github.com/matana/java/tree/master/linkedList">linkedList</a> und <a href="https://github.com/matana/java/tree/master/stack">stack</a> definiert. Collection soll zudem das Interface <code>Interable</code> erweitern.
         </td>
     </tr>
 </table>
