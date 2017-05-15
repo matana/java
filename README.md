@@ -36,4 +36,23 @@
           <p>Erstellen Sie in der Klasse <a href="https://github.com/matana/java/blob/master/linkedList/src/linkedList/LinkedListTests.java">LinkedListTests</a> entsprechende Unit-Tests, die die Funktionalität Ihrer Implementationen überprüfen.</p>
         </td>
     </tr>
+    <tr>
+        <td>2</td>
+        <td>Stack, Generics, Iterable</td>
+        <td>
+            <ul>
+            
+                             <li>
+                  <a href="http://www.torsten-horn.de/techdocs/java-generics.htm">Generics</a>
+               </li>
+               <li>
+                  <a href="http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_09_005.htm#mjaedac022d8feb8adeb6b664e81d2e969">Iterable</a>
+                  </li>
+            </ul>
+        </td>
+        <td><a href="https://github.com/matana/java/tree/master/stack">stack</a></td>
+        <td>
+          ... Aufgaben
+        </td>
+    </tr>
 </table>
