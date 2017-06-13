@@ -111,4 +111,16 @@
 				Siehe: <a href="https://github.com/matana/java/blob/master/BinaryTree/Hausaufgaben.txt">Hausaufgaben.txt</a>
 			</td>
 		</tr>
+		<tr>
+			<td>4</td>
+			<td>Java Colecctions Framework, Serializable, Comparable, Comparator</td>
+			<td>
+				tba.
+			</td>
+			<td>
+				<a href="https://github.com/matana/java/tree/master/PhoneBook">PhoneBook</a></td>
+			<td>
+				Die Hausaufgaben befinden sich als '// TODO: ' Kommentare innerhalb des Quelltextes 
+			</td>
+		</tr>
 	</table>
